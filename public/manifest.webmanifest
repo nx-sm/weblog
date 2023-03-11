@@ -1,16 +1,11 @@
 {
-	"name": "Astro Theme Cactus Demo",
-	"short_name": "Astro_Cactus",
-	"description": "Starter blog site for Astro",
+    "name": "Sergiy Matsak - Computable()",
+    "short_name": "Computable()",
+    "description": "Exploring the intersection between Technology and Human Mind.",
 	"icons": [
 		{
-			"src": "/192x192.png",
+			"src": "/120x120.png",
 			"sizes": "192x192",
-			"type": "image/png"
-		},
-		{
-			"src": "/512x512.png",
-			"sizes": "512x512",
 			"type": "image/png"
 		}
 	],

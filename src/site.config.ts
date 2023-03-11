@@ -1,7 +1,7 @@
 const siteMeta = {
 	author: "Sergiy Matsak",
-	title: "Sergiy Matsak",
-	description: "A journey in understanding the intersection of AI and Cognitive Neuroscience.",
+	title: "Computable()",
+    description: "Exploring the intersection between Technology and Human Mind.",
 	lang: "en-GB",
 	ogLocale: "en_GB",
 	githubUrl: "https://github.com/nx-sm",
