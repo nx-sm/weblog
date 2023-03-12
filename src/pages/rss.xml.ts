@@ -12,6 +12,7 @@ export const get = async () => {
 		items: posts.map((post) => ({
 			title: post.data.title,
 			description: post.data.description,
+			thumbnail: post.data.thumbnail,
 			pubDate: post.data.publishDate,
 			link: `posts/${post.slug}`,
 		})),

@@ -2,16 +2,19 @@
 import type { CollectionEntry } from "astro:content";
 import type { IElement } from "@/data/shared";
 import { getFormattedDate } from "@/utils";
+import { Image } from "@astrojs/image/components";
 
 interface Props extends IElement {
 	post: CollectionEntry<"post">;
 	withDesc?: boolean;
+	withThumbnail?: boolean;
 }
 
-const { post, as: Element = "div", withDesc = false } = Astro.props;
+const { post, as: Element = "div", withDesc = false, withThumbnail = false} = Astro.props;
 const date = new Date(post.data.publishDate);
 const datetime = date.toISOString();
 const postDate = getFormattedDate(date, { month: "short" });
+
 ---
 
 <time datetime={datetime} class="min-w-[120px] text-gray-500">{postDate}</time>
@@ -21,3 +24,13 @@ const postDate = getFormattedDate(date, { month: "short" });
 	</a>
 </Element>
 {withDesc && <q class="line-clamp-3 mt-2 block italic">{post.data.description}</q>}
+{withThumbnail && post.data.thumbnail && (
+	<div class="w-64 h-32">
+	  <Image
+		src={post.data.thumbnail}
+		alt={post.data.title}
+		width={400}
+		height={200}
+	  />
+	</div>
+  )}

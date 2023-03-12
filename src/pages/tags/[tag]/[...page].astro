@@ -31,6 +31,7 @@ const { tag } = Astro.params;
 const meta = {
 	title: `Tag: ${tag}`,
 	description: `View all posts with the tag - ${tag}`,
+	thumbnail: ``,
 };
 
 const paginationProps = {
@@ -59,7 +60,7 @@ const paginationProps = {
 			{
 				page.data.map((p) => (
 					<li class="flex flex-col flex-wrap gap-x-2 sm:flex-row [&_q]:w-full">
-						<PostPreview post={p} as="h2" withDesc />
+						<PostPreview post={p} as="h2" withDesc withThumbnail/>
 					</li>
 				))
 			}
