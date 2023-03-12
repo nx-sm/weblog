@@ -4,3 +4,5 @@ description: "How I glued together some logic to create an interactive Rubik's C
 publishDate: "11/03/2023"
 tags: ["Python", "Maya"]
 ---
+
+[WIP]

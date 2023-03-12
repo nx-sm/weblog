@@ -1,6 +1,6 @@
 const siteMeta = {
 	author: "Sergiy Matsak",
-	title: "Computable()",
+	title: "Compute.Ideas()",
     description: "Exploring the intersection between Technology and Human Mind.",
 	lang: "en-GB",
 	ogLocale: "en_GB",
