@@ -6,7 +6,7 @@
 		"dev": "astro dev",
 		"start": "astro dev",
 		"sync": "astro sync",
-		"build": "getposts && astro build",
+		"build": "getPosts && astro build",
 		"preview": "astro preview",
 		"format": "prettier -w ./src ./src/**/*.astro",
 		"getPosts": "node ./lib/notion/get-notion-posts.cjs"
