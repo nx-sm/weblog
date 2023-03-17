@@ -48,6 +48,7 @@
 		"@astrojs/prefetch": "^0.1.1",
 		"@astrojs/rss": "^2.0.0",
 		"@notionhq/client": "^2.2.3",
+		"@resvg/resvg-js-win32-x64-msvc": "^2.4.1",
 		"@supercharge/promise-pool": "^2.4.0",
 		"astro": "2.0.2",
 		"cli-progress": "^3.12.0",
