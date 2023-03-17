@@ -7,11 +7,22 @@ function removeDupsAndLowerCase(array: string[]) {
 	return Array.from(distinctItems);
 }
 
+function toPascalCase(str: string) {
+	const cleanedStr = str.replace(/[^a-zA-Z0-9]+/g, " ");
+	const words = cleanedStr.split(" ");
+
+	return words
+		.map((word) => {
+			return word.charAt(0).toUpperCase() + word.slice(1);
+		})
+		.join("");
+}
+
 const post = defineCollection({
 	schema: z.object({
-		title: z.string().max(60),
-		description: z.string().min(50).max(160),
-		thumbnail: z.string().optional(),
+		title: z.string().max(100),
+		description: z.string().min(10).max(200),
+		thumbnail: z.string().nullable().optional(),
 		publishDate: z.string().transform((str) => new Date(str)),
 		tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
 		ogImage: z.string().optional(),

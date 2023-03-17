@@ -6,9 +6,10 @@
 		"dev": "astro dev",
 		"start": "astro dev",
 		"sync": "astro sync",
-		"build": "astro build",
+		"build": "getposts astro build",
 		"preview": "astro preview",
-		"format": "prettier -w ./src ./src/**/*.astro"
+		"format": "prettier -w ./src ./src/**/*.astro",
+		"getPosts": "node ./lib/notion/get-notion-posts.cjs"
 	},
 	"devDependencies": {
 		"@astrojs/image": "0.13.0",
@@ -41,13 +42,17 @@
 		"stylelint": "^14.16.1",
 		"stylelint-config-prettier": "^9.0.4",
 		"stylelint-config-standard": "^29.0.0",
-		"tailwindcss": "^3.2.4",
-		"typescript": "^4.9.4"
+		"tailwindcss": "^3.2.4"
 	},
 	"dependencies": {
 		"@astrojs/prefetch": "^0.1.1",
 		"@astrojs/rss": "^2.0.0",
+		"@notionhq/client": "^2.2.3",
+		"@supercharge/promise-pool": "^2.4.0",
 		"astro": "2.0.2",
+		"cli-progress": "^3.12.0",
+		"notion-to-md": "^2.5.5",
+		"react": "^18.2.0",
 		"satori": "0.1.2",
 		"satori-html": "^0.3.2",
 		"sharp": "^0.31.3"
