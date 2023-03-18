@@ -10,7 +10,7 @@ interface Props {
 
 const { post } = Astro.props;
 const {
-	data: { title, description, thumbnail, ogImage, publishDate },
+	data: { title, description, ogImage, publishDate },
 	slug,
 } = post;
 const socialImage = ogImage ?? `/og-image/${slug}.png`;
@@ -37,7 +37,7 @@ const { headings } = await post.render();
 	observer.observe(targetHeader);
 </script>
 
-<BaseLayout meta={{ title, description, thumbnail, articleDate, ogImage: socialImage }}>
+<BaseLayout meta={{ title, description, articleDate, ogImage: socialImage }}>
 	<div class="flex items-start gap-x-10">
 		{
 			!!headings.length && (

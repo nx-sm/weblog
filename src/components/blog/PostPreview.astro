@@ -25,12 +25,12 @@ const postDate = getFormattedDate(date, { month: "short" });
 </Element>
 {withDesc && <q class="line-clamp-3 mt-2 block italic">{post.data.description}</q>}
 {withThumbnail && post.data.thumbnail && (
-	<div class="w-64 h-32">
+	<div class="h-32 overflow-hidden">
 	  <Image
 		src={post.data.thumbnail}
 		alt={post.data.title}
-		width={400}
-		height={200}
+		width={800}
+		height={400}
 	  />
 	</div>
   )}
