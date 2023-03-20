@@ -59,12 +59,10 @@ const { headings } = await post.render();
 				</aside>
 			)
 		}
-		<article class="flex-grow break-words">
+		<article class="flex-grow max-w-full mx-auto break-words">
 			<div id="blog-hero"><BlogHero content={post} /></div>
-			<div
-				class="prose prose-sm prose-cactus mt-12 prose-headings:font-semibold prose-headings:before:absolute prose-headings:before:-ml-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
-			>
-				<slot />
+			<div class="prose prose-sm prose-cactus mt-12 prose-headings:font-semibold prose-headings:before:absolute prose-headings:before:-ml-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none mx-4 sm:mx-auto max-w-screen-lg">
+				<slot/>
 			</div>
 		</article>
 	</div>

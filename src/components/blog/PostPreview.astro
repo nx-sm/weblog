@@ -16,9 +16,8 @@ const datetime = date.toISOString();
 const postDate = getFormattedDate(date, { month: "short" });
 
 ---
-<div class="flex flex-col">
 <time datetime={datetime} class="min-w-[120px] text-gray-500">{postDate}</time>
-<Element class="flex-shrink-0">
+<Element>
 	<a href={`/posts/${post.slug}`} class="cactus-link" rel="prefetch">
 		{post.data.title}
 	</a>
@@ -34,4 +33,3 @@ const postDate = getFormattedDate(date, { month: "short" });
 	  />
 	</div>
   )}
-</div>
